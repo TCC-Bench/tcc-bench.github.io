@@ -42,6 +42,13 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <style>
+    .no-link-style {
+      color: inherit;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -51,9 +58,10 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">TCC-Bench: Benchmarking the Traditional Chinese Culture Understanding Capabilities of MLLMs</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors
+            <h1 class="title is-1 publication-title">TCC-Bench: Benchmarking the Traditional Chinese Culture
+              Understanding Capabilities of MLLMs</h1>
+            <!-- <div class="is-size-5 publication-authors">
+              
               <span class="author-block">
                 <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
                 <span class="author-block">
@@ -61,27 +69,27 @@
                   <span class="author-block">
                     <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
                   </span>
-                  </div>
+                  </div> -->
 
-                  <div class="is-size-5 publication-authors">
+                  <!-- <div class="is-size-5 publication-authors">
                     <span class="author-block">Institution Name<br>Conferance name and year</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div> -->
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv</span>
+                      </a>
+                    </span>
 
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-
-                 <!-- Supplementary PDF link -->
+                    <!-- Supplementary PDF link -->
                     <span class="link-block">
                       <a href="static/pdfs/TCC_Bench_supp.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
@@ -94,7 +102,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/TCC-Bench" target="_blank"
+                    <a href="https://github.com/Morty-Xu/TCC-Bench" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -103,16 +111,16 @@
                   </a>
                 </span>
 
-                  <!-- Database link -->
-                  <span class="link-block">
-                    <a href="https://github.com/TCC-Bench" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fa fa-database"></i>
-                    </span>
-                    <span>Dataset</span>
-                  </a>
-                </span>
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://drive.google.com/file/d/1EbjSu_pTMQuIG7wqYZIQC5Y66DCClQdR/view?usp=sharinghttps:/" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
             </div>
           </div>
         </div>
@@ -125,11 +133,11 @@
 <!-- Teaser image-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
+    <div class="content has-text-centered">
         <img src="static/image/TCC_sample.png" alt="composition" width="70%"/>
-      <h2 class="subtitle has-text-centered">
-        Samples of TCC-Bench.
-      </h2>
+      <p>
+        Samples of TCC-Bench. TCC-Bench has eight domains: Astronomy, Music, Custom, Architecture, Transportation, Diet, Clothing and Artifact.
+      </p>
     </div>
   </div>
 </section>
@@ -142,7 +150,7 @@
         <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-            We present the <strong>T</strong>raditional <strong>C</strong>hinese <strong>C</strong>ulture understanding <strong>Bench</strong>mark, <strong>TCC-Bench</strong>, a bilingual (<em>i.e.</em>, Chinese and English) Visual Question Answering (VQA) benchmark specifically designed to evaluate the capabilities of MLLMs in understanding traditional Chinese culture. We customize eight knowledge domains that encompass key aspects of traditional Chinese culture. Moreover, the images within TCC-Bench are curated from museum artifacts, depictions of everyday life, comics, and other culturally significant materials, ensuring both visual diversity and cultural authenticity. Moreover, we introduce a semi-automated question generation method that reduces manual effort while ensuring the acquisition of high-quality data. Samples from our dataset are shown in the following figure.
+            We present the <strong>T</strong>raditional <strong>C</strong>hinese <strong>C</strong>ulture understanding <strong>Bench</strong>mark, <strong>TCC-Bench</strong>, a bilingual (<em>i.e.</em>, Chinese and English) Visual Question Answering (VQA) benchmark specifically designed to evaluate the capabilities of MLLMs in understanding traditional Chinese culture. We customize eight knowledge domains that encompass key aspects of traditional Chinese culture. Moreover, the images within TCC-Bench are curated from museum artifacts, depictions of everyday life, comics, and other culturally significant materials, ensuring both visual diversity and cultural authenticity. Moreover, we introduce a semi-automated question generation method that reduces manual effort while ensuring the acquisition of high-quality data.
           </p>
         </div>
       </div>
@@ -155,124 +163,82 @@
     <div class="container">
       <h2 class="title is-3">Overview</h2>
       We construct a multiple-choice VQA benchmark to evaluate the ability of current MLLMs to understand traditional Chinese culture. We divide the questions into eight domains: Astronomy, Music, Custom, Architecture, Transportation, Diet, Clothing and Artifact. To ensure the high quality of the benchmark, six adults are recruited for image collection and question generation. They all have bachelor's degrees or above and have extensive experience living in a Chinese cultural context. We design a semi-automated question generation pipeline to reduce manual labor costs. To facilitate the analysis of the model’s understanding of traditional Chinese culture across different languages, our dataset provides bilingual questions, options, and explanations.
-      <div class="hero-body">
+      <div class="hero-body has-text-centered">
         <img src="static/image/pipline.png" alt="composition" width="70%"/>
-      <h2 class="subtitle has-text-centered">
-        Question generation pipeline.
-      </h2>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Statistics</h2>
+      Our TCC-Bench comprises 675 images and 860 high-quality questions. Each question is accompanied by four carefully designed options, with only one correct answer, resulting in a total of 3,440 options. On average, the option length is 3.2 Chinese characters or 2.3 English words. The accompanying explanations average 20.9 Chinese characters or 15.9 English words, offering comprehensive insights into the traditional Chinese cultural knowledge underpinning each question. Furthermore, we analyze the distribution of questions across eight domains in our dataset. It can be observed that the question distribution in TCC-Bench is relatively balanced.      
+      
+      <div class="hero-body has-text-centered">
+        <img src="static/image/category_pie.png" alt="composition" width="50%"/>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Main Result</h2>
+      To comprehensively evaluate MLLMs’ understanding of traditional Chinese culture, we select various MLLMs, including both open-source and closed-source models. For open-source MLLMs, we choose models with different parameter sizes. Specifically, the selected open-source models are: LLaVA-v1.6-7B, DeepSeek-VL-7B, Qwen2-VL-7B/72B, CogVLM2-19B, GLM-4V-9B, InternVL2.5-8B/78B. We use A800 GPUs to deploy and evaluate them. For closed-source MLLMs, we choose GPT-4o, Claude-3.7 Sonnet and Gemini-2.0 Flash. We evaluate them by calling the corresponding official APIs. The prompts are formatted as a multiple-choice setup. We use accuracy as the evaluation metric and prepare a rule-based answer extraction method.      
+      <div class="hero-body has-text-centered">
+        <img src="static/image/main_result.png" alt="composition" width="70%"/>
     </div>
     </div>
   </div>
 </section>
 
 
-<!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
+      <h2 class="title is-3">Error Analysis</h2>
+      To analyze the underlying causes of the performance gap observed in MLLMs on TCC-Bench and to provide insights for their improvement, we extract the erroneous responses of GPT-4o under the CoT setting for manual annotations. Based on human annotations, we categorize the errors into four types: Visual Perceptual Error, Lack of Cultural Knowledge, Reasoning Error, and Reject to Answer.      
+      <div class="hero-body has-text-centered">
+        <img src="static/image/plot_error_pie.png" alt="composition" width="50%"/>
+    </div>
+
+    <div id="results-carousel" class="carousel results-carousel has-text-centered">
       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
+       <!-- Your image here -->
+       <img src="static/image/error_VPE.png" alt="MY ALT TEXT"/>
+       <h2 class="subtitle has-text-centered">
+        Visual Perceptual Error.
        </h2>
      </div>
      <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
+       <!-- Your image here -->
+       <img src="static/image/error_knowledge.png" alt="MY ALT TEXT"/>
+       <h2 class="subtitle has-text-centered">
+        Lack of Cultural Knowledge.
+       </h2>
+     </div>
+     <div class="item">
+       <!-- Your image here -->
+       <img src="static/image/error_reason.png" alt="MY ALT TEXT"/>
+       <h2 class="subtitle has-text-centered">
+        Reasoning Error.
       </h2>
     </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+    <div class="item">
+     <!-- Your image here -->
+     <img src="static/image/error_reject.png" alt="MY ALT TEXT"/>
+     <h2 class="subtitle has-text-centered">
+      Reject to Answer.
+     </h2>
+   </div>
+ </div>
 
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
